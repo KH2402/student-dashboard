@@ -1,0 +1,65 @@
+@charset "ISO-8859-1";
+
+body {
+	background: rgba(0, 0, 0, 0.3) url(hd\ university.jpg);
+	background-blend-mode: darken;
+	background-position: center;
+	background-size: cover;
+	/* background-size: 100% 100%; */
+	background-repeat: no-repeat;
+
+	/* min-height: 100vh; */
+}
+
+.heading {
+	font-size: 2.5rem;
+	font-weight: 800;
+	color: rgb(206, 213, 219);
+	padding: 1%;
+	/* calc(10px + 1.2625vw); */
+}
+
+.container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	max-width: 330px;
+	/* background-color: rgb(128, 117, 117); */
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 0.5rem;
+	padding: 0% 5% 1% 5%;
+	/* padding: calc(1% 10% - 5% 20%); */
+	margin-top: 5rem;
+	font-size: 2rem;
+	display: grid;
+	place-items: center;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px
+		10px 10px;
+}
+
+.login {
+	color: rgb(220, 224, 228);
+	font-size: rem;
+	margin-bottom: 4rem;
+
+	/* padding: 0.5rem 4rem; */
+}
+
+.a {
+	height: 50px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: aliceblue;
+	border: 1px solid rgb(105, 107, 105);
+	border-radius: 1rem;
+}
+
+a:hover {
+	/* background-color: rgb(132, 82, 82); */
+	color: rgb(227, 188, 136);
+	background: rgba(0, 0, 0, 0.5);
+	box-shadow: rgba(159, 156, 156, 0.24) 0px 3px 8px;
+}
