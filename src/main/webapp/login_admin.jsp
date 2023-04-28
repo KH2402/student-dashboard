@@ -8,42 +8,23 @@
 <meta charset="ISO-8859-1">
 <title>Student Management System</title>
  <link rel="stylesheet" href="component/style.css">
-
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+  </script>
 </head>
 <body>
-<h1>ADMIN LOGIN PAGE</h1>
+
 
 <div class="container">
     <input type="checkbox" id="check">
     <div class="login form">
-      <header>Login</header>
+      <header>Admin Login</header>
       
-      <form action="login_page">
-        <input type="email" placeholder="Enter your email" >
-        <input type="password" placeholder="Enter your password" required="required">
+      <form action="login_admin">
+        <input type="email" id="email" name="s1" placeholder="Enter your email" >
+        <input type="password"  id="pass" name="s2"  placeholder="Enter your password" required="required">
         <input type="submit" class="btn1" value="Login">
       </form>
-      
-      <div class="signup">
-        <span class="signup">Don't have an account?
-         <label for="check">Signup</label>
-        </span>
-      </div>
-    </div>
-    <div class="registration form">
-      <header>Signup</header>
-      
-      <form action="signup_page" >
-        <input type="email" name="s1" placeholder="Enter your email" required="required">
-        <input type="password" name="s2" placeholder="Create a password" required="required">
-        <input type="password" name="s3"placeholder="Confirm your password" required="required">
-        <input type="submit" class="btn1" value="Signup">
-      </form>
-      <div class="signup">
-        <span class="signup">Already have an account?
-         <label for="check">Login</label>
-        </span>
-      </div>
       
       <form action="index.jsp">
       	<div >
@@ -53,19 +34,9 @@
     </div>
   </div>
   
-  
-  <!-- javascript -->
-  <script type="text/javascript">
-  	var status=document.getElementById("status").value;
-  	if(status=="failed"){
-  		swal("Sorry","Wrong Username or Password","error")
-  	}
-  	else if(status=="invalidEmail"){
-  		swal("Sorry","Please Enter Username","error")
-  	}
-  	else if(status=="invalidPass"){
-  		swal("Sorry","Please Enter Password","error")
-  	}
+
+ 
+	
   </script>
 
 </body>

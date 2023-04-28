@@ -8,28 +8,39 @@
 <meta charset="ISO-8859-1">
 <title>Student Management System</title>
 <link rel="stylesheet" href="component/style.css">
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+  </script>
 
 </head>
 <body>
-
+     
 
 	<div class="container">
 		<input type="checkbox" id="check">
 		<div class="login form">
-			<header>Login</header>
+			<header>Student Login</header>
 
-			<form action="login_page" >
-				<input type="email" name="t1" placeholder="Enter your email" required="required">
-				<input type="password" name="t2" placeholder="Enter your password" required="required">
-				<input type="submit" class="btn1"value="Login">
+			<form action="login_student">
+				<input type="email" name="t1" placeholder="Enter your email"
+					required="required"> 
+				<input type="password" name="t2"
+					placeholder="Enter your password" required="required"> 
+				<input type="submit" class="btn1" value="Login">
 
 			</form>
-			
+
 			<form action="index.jsp">
 				<div>
 					<input type="submit" class="btn1" value="Back">
 				</div>
 			</form>
+		</div>
+		<!-- 
+		
+	  	
+	  </script>
+		
 		
 			<div class="signup">
 				<span class="signup">Don't have an account? 
@@ -62,7 +73,10 @@
 				</div>
 			</form>
 		</div>
-		
+		 -->
+        
+        <!-- javascript -->
+ 
 	</div>
 
 

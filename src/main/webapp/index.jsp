@@ -12,11 +12,11 @@
 	<div class="container">
 	
 		<p class="lg">Login</p>
-		<form action="login_student.jsp" >
+		<form action="login_admin.jsp" >
 			<input type="submit" value="ADMIN " class="anc">
 		</form>
 	
-		<form action="login_admin.jsp" >
+		<form action="login_student.jsp" >
 			<input type="submit" value="STUDENT" class="anc">
 		</form>
 	</div>
