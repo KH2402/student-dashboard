@@ -19,15 +19,15 @@
 			<header>Login</header>
 
 			<form action="login_page" >
-				<input type="email" name="t1" placeholder="Enter your email">
-				<input type="password" name="t2" placeholder="Enter your password">
-				<input type="submit" value="Login">
+				<input type="email" name="t1" placeholder="Enter your email" required="required">
+				<input type="password" name="t2" placeholder="Enter your password" required="required">
+				<input type="submit" class="btn1"value="Login">
 
 			</form>
 			
 			<form action="index.jsp">
 				<div>
-					<input type="submit" id="btn1" value="Back">
+					<input type="submit" class="btn1" value="Back">
 				</div>
 			</form>
 		
@@ -45,10 +45,10 @@
 		<div class="registration form">
 			<header>Signup</header>
 			<form action="signup_page" >
-				<input type="email" name="s1" placeholder="Enter your email"> 
-				<input type="password" name="s2" placeholder="Create a password">
-				<input type="password" name="s3" placeholder="Confirm your password"> 
-				<input type="submit" class="button" value="Signup">
+				<input type="email" name="s1" placeholder="Enter your email"required="required"> 
+				<input type="password" name="s2" placeholder="Create a password"required="required">
+				<input type="password" name="s3" placeholder="Confirm your password"required="required"> 
+				<input type="submit" class="btn1" value="Signup">
 			</form>
 			
 			<div class="signup">

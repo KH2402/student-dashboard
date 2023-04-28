@@ -19,9 +19,9 @@
       <header>Login</header>
       
       <form action="login_page">
-        <input type="email" placeholder="Enter your email">
-        <input type="password" placeholder="Enter your password">
-        <input type="submit" id="btn1" value="Login">
+        <input type="email" placeholder="Enter your email" >
+        <input type="password" placeholder="Enter your password" required="required">
+        <input type="submit" class="btn1" value="Login">
       </form>
       
       <div class="signup">
@@ -34,10 +34,10 @@
       <header>Signup</header>
       
       <form action="signup_page" >
-        <input type="email" name="s1" placeholder="Enter your email">
-        <input type="password" name="s2" placeholder="Create a password">
-        <input type="password" name="s3"placeholder="Confirm your password">
-        <input type="submit" class="button" value="Signup">
+        <input type="email" name="s1" placeholder="Enter your email" required="required">
+        <input type="password" name="s2" placeholder="Create a password" required="required">
+        <input type="password" name="s3"placeholder="Confirm your password" required="required">
+        <input type="submit" class="btn1" value="Signup">
       </form>
       <div class="signup">
         <span class="signup">Already have an account?
@@ -53,6 +53,20 @@
     </div>
   </div>
   
+  
+  <!-- javascript -->
+  <script type="text/javascript">
+  	var status=document.getElementById("status").value;
+  	if(status=="failed"){
+  		swal("Sorry","Wrong Username or Password","error")
+  	}
+  	else if(status=="invalidEmail"){
+  		swal("Sorry","Please Enter Username","error")
+  	}
+  	else if(status=="invalidPass"){
+  		swal("Sorry","Please Enter Password","error")
+  	}
+  </script>
 
 </body>
 </html>

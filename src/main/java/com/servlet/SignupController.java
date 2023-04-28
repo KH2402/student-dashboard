@@ -38,13 +38,11 @@ public class SignupController extends HttpServlet {
 			String query;
 			query="select *from login where email=?";
 			
-
-			ps = con.prepareStatement("query");
+			ps = con.prepareStatement(query);
 			ps.setString(1, email);
-			
 			rs=ps.executeQuery();
-			out.println("Sucessfully db connection ......");
-			/*
+			
+			
 			boolean status=rs.next();
 	        
 	        if(!status) { // email not present
@@ -58,13 +56,13 @@ public class SignupController extends HttpServlet {
 	        		ps.executeUpdate();
 	        	
 		        }else {
-		        	out.print("alert('password and confirm password not matched !!!');");
+		        	out.print("password and confirm password not matched ");
 		        }
 	        }else {
-	        	out.print("alert('enter other email address!!!');");
+	        	out.print("enter other email address!!!");
 	        }
 	        con.close();
-	        */
+	        
 			
 		}catch(SQLException ex) {
 			ex.printStackTrace();
