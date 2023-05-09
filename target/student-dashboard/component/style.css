@@ -1,10 +1,8 @@
 @charset "ISO-8859-1";
 
-@charset "ISO-8859-1";
+
 /* Import Google font - Poppins */
-@import
-	url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
-	;
+
 
 * {
 	margin: 0;
@@ -15,44 +13,31 @@
 
 body {
 	background: rgba(0, 0, 0, 0.3) url(university.jpg);
+	background-size: cover;
 	background-blend-mode: darken;
-	background-position: center;
 	
-	/* background-size: 100% 100%; */
-	background-repeat: no-repeat;
+	
 	
 	
 }
+
+
 
 .container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	max-width: 430px;
 	width: 100%;
+	max-width: 430px;
 	background: rgba(0, 0, 0, 0.6);
 	display: grid;
+	
 	font-size: 2rem;
 	border-radius: 7px;
+	place-items: center;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px
 		10px 10px;
-}
-
-.container .registration {
-	display: none;
-}
-
-#check:checked ~ .registration {
-	display: block;
-}
-
-#check:checked ~ .login {
-	display: none;
-}
-
-#check {
-	display: none;
 }
 
 .container .form {
@@ -60,10 +45,12 @@ body {
 }
 
 .form header {
+	color: rgb(227, 188, 136);
 	font-size: 2rem;
 	font-weight: 500;
 	text-align: center;
 	margin-bottom: 1.5rem;
+	
 }
 
 .form input {
@@ -72,10 +59,12 @@ body {
 	padding: 0 15px;
 	font-size: 17px;
 	margin-bottom: 1.3rem;
-	border: 1px solid #ddd;
+	
+	border: 1px solid #ffffff;
 	border-radius: 6px;
 	outline: none;
 }
+
 
 
 .form input.btn1:hover {
@@ -83,23 +72,9 @@ body {
 	background: rgba(0, 0, 0, 0.5);
 	font-size: 1.2rem;
 	font-weight: 500;
-	letter-spacing: 1px;
-	margin-top: 1.7rem;
+	
+	
 	cursor: pointer;
-	transition: 0.4s;
+	
 }
 
-
-.signup{
-	font-size: 17px;
-	text-align: center;
-}
-
-.signup label {
-	color: #009579;
-	cursor: pointer;
-}
-
-.signup label:hover {
-	text-decoration: underline;
-}

@@ -1,3 +1,9 @@
 C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\db\DBConnect.java
-C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\LoginController.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\AddStudentController.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\LoginAdminController.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\entity\StudentDetails.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\DeleteStudentController.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\LoginStudentController.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\UpdateStudentController.java
 C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\SignupController.java
+C:\Users\krish\Documents\workspace-spring-tool-suite-4-4.18.0.RELEASE\student-dashboard\src\main\java\com\servlet\StudentServlet.java

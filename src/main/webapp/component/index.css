@@ -1,8 +1,8 @@
 @charset "ISO-8859-1";
 
-
 body {
 	background: rgba(0, 0, 0, 0.3) url(university.jpg);
+	
 	background-blend-mode: darken;
 	background-position: center;
 	background-size: cover;
@@ -13,8 +13,9 @@ body {
 }
 
 .heading {
-	font-size: 2.5rem;
-	font-weight: 800;
+	font-size: 65px;
+	font-family:sans-serif;
+	
 	color: rgb(206, 213, 219);
 	padding: 1%;
 	/* calc(10px + 1.2625vw); */
@@ -51,7 +52,6 @@ body {
 .anc {
 	color:red;
 	background-color:#EB4D4B;
-
 	height: 50px;
 	width:300px;
 	

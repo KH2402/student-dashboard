@@ -17,7 +17,7 @@
      
 
 	<div class="container">
-		<input type="checkbox" id="check">
+		
 		<div class="login form">
 			<header>Student Login</header>
 
@@ -26,13 +26,13 @@
 					required="required"> 
 				<input type="password" name="t2"
 					placeholder="Enter your password" required="required"> 
-				<input type="submit" class="btn1" value="Login">
+				<input type="submit" id="login" class="btn1"  value="Login">
 
 			</form>
 
 			<form action="index.jsp">
 				<div>
-					<input type="submit" class="btn1" value="Back">
+					<input type="submit" class="btn1"  value="Back">
 				</div>
 			</form>
 		</div>

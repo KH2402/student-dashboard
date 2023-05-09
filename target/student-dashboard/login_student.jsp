@@ -8,32 +8,39 @@
 <meta charset="ISO-8859-1">
 <title>Student Management System</title>
 <link rel="stylesheet" href="component/style.css">
+<script src=
+"https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js">
+  </script>
 
 </head>
 <body>
-
+     
 
 	<div class="container">
-		<input type="checkbox" id="check">
+		
 		<div class="login form">
 			<header>Student Login</header>
 
-			<form action="login_page">
+			<form action="login_student">
 				<input type="email" name="t1" placeholder="Enter your email"
 					required="required"> 
 				<input type="password" name="t2"
 					placeholder="Enter your password" required="required"> 
-				<input type="submit" class="btn1" value="Login">
+				<input type="submit" id="login" class="btn1"  value="Login">
 
 			</form>
 
 			<form action="index.jsp">
 				<div>
-					<input type="submit" class="btn1" value="Back">
+					<input type="submit" class="btn1"  value="Back">
 				</div>
 			</form>
 		</div>
 		<!-- 
+		
+	  	
+	  </script>
+		
 		
 			<div class="signup">
 				<span class="signup">Don't have an account? 
@@ -69,16 +76,7 @@
 		 -->
         
         <!-- javascript -->
-  <script type="text/javascript"> 
-  
-   
-     var status= <%request.getAttribute("status"); %>
-		
-  	if(status="invalid"){
-  		swal("Sorry","Wrong Username or Password","error")
-  	}
-  	
-  </script>
+ 
 	</div>
 
 
