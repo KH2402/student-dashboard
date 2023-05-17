@@ -116,10 +116,10 @@ p {
 	</header>
 	<main>
 		<p>Your RollNo : <%=student.getRollno() %></p><br>
-		<p>Your RollNo : <%=student.getPrn() %></p><br>
-		<p>Your RollNo : <%=student.getPhone() %></p><br>
-		<p>Your RollNo : <%=student.getEmail() %></p><br>
-		<p>Your RollNo : <%=student.getAttendance() %></p><br>
+		<p>Your PRN : <%=student.getPrn() %></p><br>
+		<p>Your Phone : <%=student.getPhone() %></p><br>
+		<p>Your Email : <%=student.getEmail() %></p><br>
+		<p>Your Attendance : <%=student.getAttendance() %></p><br>
 	</main>
 	
 

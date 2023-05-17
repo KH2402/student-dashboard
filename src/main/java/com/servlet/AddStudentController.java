@@ -38,7 +38,7 @@ public class AddStudentController extends HttpServlet {
 			ResultSet rs;
 			RequestDispatcher rd=null;
 			PrintWriter out=resp.getWriter();
-			boolean status=false;
+			
 		
 			
 			String query="select rollno from students where rollno=? ";
@@ -46,9 +46,8 @@ public class AddStudentController extends HttpServlet {
 			ps = con.prepareStatement(query);
 			ps.setString(1, rollno);
 			rs=ps.executeQuery();
-	       
-	        
-	        
+			
+		
 	        //roll no validation
 	        if(rs.next()) {
 	            rd = req.getRequestDispatcher("addstudent.jsp");
@@ -57,23 +56,35 @@ public class AddStudentController extends HttpServlet {
 	        }
 	        else {
 
-				// add student details to db
-		        String query1="insert into students(name,rollno,prn,phone,email,attendance) values(?,?,?,?,?,?)";
-		        ps = con.prepareStatement(query1);
-				ps.setString(1, name);
-				ps.setString(2, rollno);
-				ps.setString(3, prn);
-				ps.setString(4, phone);
-				ps.setString(5, email);
-				ps.setString(6, attendance);
-	
-	
-				ps.executeUpdate();
-		       
-				rd = req.getRequestDispatcher("addstudent.jsp");
-				rd.include(req, resp);
-				out.println("<script> swal('Successfully Added','click me','success');</script>");
+				String que="select prn from students where prn=? ";
 				
+				ps = con.prepareStatement(que);
+				ps.setString(1, prn);
+				rs=ps.executeQuery();
+				if(rs.next()) {
+					rd = req.getRequestDispatcher("addstudent.jsp");
+		            rd.include(req, resp);
+		            out.println("<script> swal('Sorry','Enter Correct PRN No','error');</script>");
+		        
+				}else {
+
+					// add student details to db
+			        String query1="insert into students(name,rollno,prn,phone,email,attendance) values(?,?,?,?,?,?)";
+			        ps = con.prepareStatement(query1);
+					ps.setString(1, name);
+					ps.setString(2, rollno);
+					ps.setString(3, prn);
+					ps.setString(4, phone);
+					ps.setString(5, email);
+					ps.setString(6, attendance);
+		
+		
+					ps.executeUpdate();
+			       
+					rd = req.getRequestDispatcher("addstudent.jsp");
+					rd.include(req, resp);
+					out.println("<script> swal('Successfully Added','click me','success');</script>");
+				}
 				
 				
 	        }

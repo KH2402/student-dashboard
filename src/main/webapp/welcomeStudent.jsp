@@ -11,6 +11,20 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 <style type="text/css">
+table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
 body {
 	font-family: Arial, sans-serif;
 	margin: 0;
@@ -49,12 +63,9 @@ main {
 	margin: 20px;
 }
 
-
 p {
 	margin-top: 10px;
 }
-
-
 
 @media screen and (max-width: 767px) {
 	nav ul {
@@ -66,47 +77,47 @@ p {
 
 </head>
 <body>
-		<%!
-		StudentDetails student;
-		Connection con;
-		PreparedStatement ps1;
-		ResultSet rs1;
-		HttpSession sess;
-		String email;
-		String qu;
-		%>
+	<%!StudentDetails student;
+	Connection con;
+	PreparedStatement ps1;
+	ResultSet rs1;
+	HttpSession sess;
+	String email;
+	String qu;%>
 
 
-		<%
-		try{
-			
-			sess=request.getSession(true);
-			email=sess.getAttribute("emailData").toString();
-			
-			con=DBConnect.getConn();
-			qu="select * from students where email=?";
-			
-			ps1 = con.prepareStatement(qu);
-			ps1.setString(1, email);
-			rs1=ps1.executeQuery();
-			student=new StudentDetails();
-			if(rs1.next()){
-				student.setName( rs1.getString("name")) ;
-				student.setRollno(rs1.getString("rollno"));
-				student.setPrn(rs1.getString("prn"));
-				student.setPhone(rs1.getString("phone"));
-				student.setEmail(rs1.getString("email"));
-				student.setAttendance(rs1.getString("attendance"));
-			}
-		}catch(SQLException ex){
-			out.println(ex);
+	<%
+	try {
+
+		sess = request.getSession(true);
+		email = sess.getAttribute("emailData").toString();
+
+		con = DBConnect.getConn();
+		qu = "select * from students where email=?";
+
+		ps1 = con.prepareStatement(qu);
+		ps1.setString(1, email);
+		rs1 = ps1.executeQuery();
+		student = new StudentDetails();
+		if (rs1.next()) {
+			student.setName(rs1.getString("name"));
+			student.setRollno(rs1.getString("rollno"));
+			student.setPrn(rs1.getString("prn"));
+			student.setPhone(rs1.getString("phone"));
+			student.setEmail(rs1.getString("email"));
+			student.setAttendance(rs1.getString("attendance"));
 		}
-
-		%>	
+	} catch (SQLException ex) {
+		out.println(ex);
+	}
+	%>
 	<header>
-	
-		
-		<h1>WELCOME  <%=student.getName()%> </h1>
+
+
+		<h1>
+			WELCOME
+			<%=student.getName()%>
+		</h1>
 		<nav>
 			<ul>
 				<li><a href="index.jsp">Logout</a></li>
@@ -115,13 +126,35 @@ p {
 		</nav>
 	</header>
 	<main>
-		<p>Your RollNo : <%=student.getRollno() %></p><br>
-		<p>Your PRN : <%=student.getPrn() %></p><br>
-		<p>Your Phone : <%=student.getPhone() %></p><br>
-		<p>Your Email : <%=student.getEmail() %></p><br>
-		<p>Your Attendance : <%=student.getAttendance() %></p><br>
+		<table>
+			<tr>
+				<th>Field</th>
+				<th>Value</th>
+			</tr>
+			<tr>
+				<td>Your RollNo</td>
+				<td><%=student.getRollno()%></td>
+			</tr>
+			<tr>
+				<td>Your PRN</td>
+				<td><%=student.getPrn()%></td>
+			</tr>
+			<tr>
+				<td>Your Phone</td>
+				<td><%=student.getPhone()%></td>
+			</tr>
+			<tr>
+				<td>Your Email</td>
+				<td><%=student.getEmail()%></td>
+			</tr>
+			<tr>
+				<td>Your Attendance</td>
+				<td><%=student.getAttendance()%></td>
+			</tr>
+		</table>
+		
 	</main>
-	
+
 
 </body>
 </html>
